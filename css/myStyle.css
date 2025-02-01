@@ -18,13 +18,16 @@ body{
     align-items:center;
     padding:20px;
 }
+.askOptions{
+
+}
 .mainStyle{
     background:rgb(205, 237, 241);
     border:1px solid rgb(138, 200, 252);
     body-color:rgb(243, 202, 202);
     border-radius:10px;
     box-shadow: 12px 12px 5px 5px rgb(0 0 0 / 20%);
-    width:60%;
+    width:80%;
     text-align:center;
     padding:30px;
 }
@@ -42,5 +45,32 @@ body{
     display:grid;
     grid-template-columns: repeat(2 , 1fr);
     gap:12px;
+}
+.Options button.active{
+    background:rgb(212, 212, 182);
+}
+.Options button:hover{
+    background:rgb(224, 224, 201);
+}
+.askOptions{
+    margin:20px;
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    justify-content:center;
+    align-items:center;
+}
+.btnAskOptions{
+    padding:5px;
+    border:2px dot #bbbb00;
+    cursor:pointer;
+    font-size:1.5rem;
+    width:3.1rem;
+    transition:0.3s ease;
+}
+.headerAskNumber{
+    font-family:"Raleway";
+    margin-top:20px;
+    margin-bottom:15px;
 }
 
