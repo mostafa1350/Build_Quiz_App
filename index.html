@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+png+jpeg" href="icon-img/quiz.svg">
-    <link rel="stylesheet" href="css/myStyle.css">
+    <!-- from Google Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- ---------- -->
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/quizStyle.css">
     <title>Quiz</title>
 </head>
 <body>
-
     <!-- Part One : Configuration Style  -->
 
     <div class="mainStyle">
@@ -37,8 +40,42 @@
         </div>
     </div>
 
-    <!-- Part Two : Configuration Style  -->
+    <!-- Part Two : Quiz Style  -->
 
+    <div class="quizPartStyle">
+        <!-- ======================= -->
+        <header class="quizHeader">
+            <h2 class="quizPart">Quiz Part</h2>
+            <div class="quizTimer">
+                <span class="material-symbols-rounded">alarm_on</span>
+                <div class="quizTime">20s</div>
+            </div>
+        </header>
+        <!-- ======================== -->
+         <div class="quizScreen">
+            <h2 class="quizAsk">in JS, how do you create a function?</h2>
+            <ul class="aswerQuizUlList">
+                <li class="listAnsewer">
+                    <p>create function myFunction()</p>
+                </li>
+                <li class="listAnsewer">
+                    <p>function myFunction()</p>
+                </li>
+                <li class="listAnsewer">
+                    <p>def function myFunction()</p>
+                </li>
+                <li class="listAnsewer">
+                    <p>func myFunction()</p>
+                </li>
+            </ul>
+         </div>
+         <!-- ======================= -->
+          <div class="bottomQuizPart">
+            <p class="askCondition"><b>2</b> of <b> 10 </b> Questions</p>
+            <span class="material-symbols-rounded">arrow_right_alt</span>
+          </div>
+        <!-- ======================== -->
+    </div>
 
 
 
