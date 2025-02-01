@@ -22,6 +22,10 @@ body{
 
 }
 .mainStyle{
+    /* we want to hidden this part , until Script execute */
+    display:none;
+    /* ===================== */
+
     background:rgb(205, 237, 241);
     border:1px solid rgb(138, 200, 252);
     body-color:rgb(243, 202, 202);
@@ -66,11 +70,36 @@ body{
     cursor:pointer;
     font-size:1.5rem;
     width:3.1rem;
-    transition:0.3s ease;
+    border:1px solid #00aaff;
+    border-radius:4px;
+    transition:0.53s ease;
 }
 .headerAskNumber{
     font-family:"Raleway";
     margin-top:20px;
     margin-bottom:15px;
 }
-
+.btnStartQuizDiv{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px;
+}
+.btnSatartQuiz{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgb(194, 194, 248);
+    font-family:"Raleway";
+    font-size:1.1rem;
+    cursor:pointer;
+    padding:6px;
+    width:8rem;
+    border:1px solid #00aaff;
+    border-radius:4px;
+}
+.btnSatartQuiz:hover{
+    background:rgb(241, 221, 208);
+    border:1.5px solid rgb(126, 203, 245);
+    transition:0.7s ease;
+}
