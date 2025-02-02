@@ -21,16 +21,20 @@ body{
 .askOptions{
 
 }
+/* =========================== */
+:where(.mainStyle ,.quizPartStyle){
+    background:rgb(205, 237, 241);
+    border-radius:10px;
+    box-shadow: 12px 12px 5px 5px rgb(0 0 0 / 20%);
+    border:1px solid rgb(138, 200, 252);
+    body-color:rgb(243, 202, 202);
+}
+/* =========================== */
+
 .mainStyle{
     /* we want to hidden this part , until Script execute */
     display:none;
     /* ===================== */
-
-    background:rgb(205, 237, 241);
-    border:1px solid rgb(138, 200, 252);
-    body-color:rgb(243, 202, 202);
-    border-radius:10px;
-    box-shadow: 12px 12px 5px 5px rgb(0 0 0 / 20%);
     width:80%;
     text-align:center;
     padding:30px;
