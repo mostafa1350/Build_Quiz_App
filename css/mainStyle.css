@@ -107,3 +107,35 @@ body{
     border:1.5px solid rgb(126, 203, 245);
     transition:0.7s ease;
 }
+/* ================================================= */
+/* ================ PART TWO - QUIZ PART ============== */
+/* ================================================= */
+.quizPartStyle{
+    width:80%;
+
+}
+.quizHeader{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    gap:150px;
+    margin-left:130px;
+    margin-right:130px;
+    box-shadow:0px 2px 5px rgba(0,0,0, 0.2);
+}
+.quizTimer{
+    display:flex;
+    background:rgb(66, 66, 62);
+    color: #fff000;
+    padding:5px;
+    border-radius:4px;
+}
+.quizScreen{
+    padding:22px;
+}
+.aswerQuizUlList{
+    list-style:none;
+    margin-top:18px;
+}
