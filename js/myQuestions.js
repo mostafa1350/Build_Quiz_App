@@ -1,7 +1,7 @@
-const questions=[
+const myAsksArray=[
     {
         category:"programming",
-        questions:[
+        asks:[
             {
                 question:"What tag is used to define a hyperlink in HTML?",
                 options:["<link>","<a>","<href>","<hyper>"],
