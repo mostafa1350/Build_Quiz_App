@@ -24,7 +24,7 @@ body{
 /* =========================== */
 :where(.mainStyle ,.quizPartStyle, .resultStyle){
 
-    display:none;
+    /* display:none; */
 
     background:rgb(205, 237, 241);
     border-radius:10px;
