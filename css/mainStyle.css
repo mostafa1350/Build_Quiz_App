@@ -201,6 +201,7 @@ body{
     border-radius: 6px;
     cursor:pointer;
     width:60px;
+    visibility:hidden;
 }
 .btnNextAsk:hover{
     background: rgb(243, 226, 189);

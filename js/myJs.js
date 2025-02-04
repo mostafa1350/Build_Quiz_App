@@ -54,17 +54,20 @@ const handleAnswer=(myOption, indexReply)=>{
     // disable other reply when click the answer
     replyOptions.querySelectorAll(".listAnsewer").forEach(option => option.style.pointerEvents = "none");
 
+    btnNextQuestion.style.visibility = "visible";
+
 }
 
 
 // Show data in "quizAsk" from "h2" tag in quizScreen 👇
-
+// ====================================================
 const showQuestion = ()=>{
     curQuestion = randomAsk();
     if(!curQuestion) return;
 
     replyOptions.innerHTML="";
 
+    btnNextQuestion.style.visibility = "hidden";
     console.log(curQuestion);
 
 
