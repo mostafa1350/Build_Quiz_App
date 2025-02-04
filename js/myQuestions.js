@@ -177,7 +177,7 @@ const myAsksArray=[
         questions:[
             {
                 
-                question:"How many planets are there in our Galaxy?",
+                question:"How many planets are there in our Solar System?",
                 options:["8","9","10","7"],
                 correctAnsewer:0,
             },
