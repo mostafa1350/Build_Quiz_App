@@ -1,4 +1,7 @@
 
+//============== def All Cointainer ===========
+const quizPartStyle = document.querySelector(".quizPartStyle");
+const resultStyle = document.querySelector(".resultStyle");
 // ============= def Variable =================
 
 let myCategoryAsk = "programming";
@@ -9,6 +12,8 @@ let curQuestion=null;
 const historyAskIndex = [];
 const recordNumber = document.querySelector(".recordNumber");
 const totalQuestion = 10;
+
+let numberCorrectReply = 0;
 
 // ================= TIMER ===================
 const timeQuiz  = 5;
@@ -40,6 +45,15 @@ const startTimer = ()=>{
     } , 1000);
 }
 // ===========================================
+const finalResultQuiz = ()=>{
+    quizPartStyle.style.display = "none";
+    resultStyle.style.display = "block";
+    const textResult = `You answered <b>${numberCorrectReply}</b> from <b>${totalQuestion}</b> Asks , well Done!`;
+    document.querySelector(".msgResult").innerHTML = textResult;
+}
+
+
+// ===========================================
 
 const randomAsk=()=>{
     
@@ -50,9 +64,10 @@ const randomAsk=()=>{
 
     if(historyAskIndex.length>= Math.min(classificationAsks.length,totalQuestion)){
 
-        recordNumber.innerHTML = "Quiz Completed";
-        // btnNextQuestion.visibility= "hidden";
-        btnNextQuestion.enable = false;
+        return finalResultQuiz();
+        // recordNumber.innerHTML = "Quiz Completed";
+        // // btnNextQuestion.visibility= "hidden";
+        // btnNextQuestion.enable = false;
 
     };
 
@@ -94,7 +109,7 @@ const handleAnswer=(myOption, indexReply)=>{
 
     myOption.classList.add(isCorrect ? 'correct' :'incorrect');
 
-    !isCorrect ? highLightReplyFunc() : "";
+    !isCorrect ? highLightReplyFunc() : numberCorrectReply++;
 
     console.log("isCorrect  =>" + !isCorrect);
 
