@@ -5,6 +5,8 @@ let myCategoryAsk = "programming";
 let replyOptions = document.querySelector(".aswerQuizUlList");
 let btnNextQuestion = document.querySelector(".btnNextAsk");
 let curQuestion=null;
+//we want that each question comes only one time so we need to History of each Question
+const historyAskIndex = [];
 // ===========================================
 
 const randomAsk=()=>{
@@ -12,10 +14,14 @@ const randomAsk=()=>{
     // "myAsksArray" is from myQuestions.js that has a set of Questions
     // "asks" is an array of question in each Category
 
-    const classificationAsks = myAsksArray.find(classification=> classification.category.toLowerCase() === myCategoryAsk.toLowerCase()).asks;
-    const getRandomQuestion = classificationAsks[Math.floor(Math.random() * classificationAsks.length)];
+    const classificationAsks = myAsksArray.find(classification=> classification.category.toLowerCase() === myCategoryAsk.toLowerCase()).asks || [];
+    // first , in historyAskIndex has no array , after execute the follwoing code, it fill with the used index of question
+    const availableQuestion = classificationAsks.filter((_,index)=> !historyAskIndex.includes(index));
+    const getRandomQuestion = availableQuestion[Math.floor(Math.random() * availableQuestion.length)];
 
     console.log(getRandomQuestion);
+    //fill with the used index of Questions ...
+    historyAskIndex.push(classificationAsks.indexOf(getRandomQuestion));
 
     return getRandomQuestion;
 }
@@ -54,9 +60,7 @@ const handleAnswer=(myOption, indexReply)=>{
     // disable other reply when click the answer
     replyOptions.querySelectorAll(".listAnsewer").forEach(option => option.style.pointerEvents = "none");
 
-    btnNextQuestion.style.visibility = "visible";
-
-}
+    btnNextQuestion.style.visibility = "visible";}
 
 
 // Show data in "quizAsk" from "h2" tag in quizScreen 👇
