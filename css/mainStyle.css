@@ -223,17 +223,17 @@ body{
     height:172.2px;//main height:287px
     margin-bottom:34px;
 }
-.endQuizHeader, .msgResult{
+.endQuizHeader, .recordNumber{
     color:rgb(109, 1, 1);
     margin-top:20px;
     margin-bottom:10px;
     text-align:center;
 }
-.msgResult{
+.recordNumber{
     color:rgb(23, 2, 99);
     font-size:18px;
 }
-.msgResult b{
+.recordNumber b{
     color:rgb(170, 82, 0);
     font-weight:600;
 }
