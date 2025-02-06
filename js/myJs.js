@@ -1,5 +1,6 @@
 
 //============== def All Cointainer ===========
+const mainStyle = document.querySelector(".mainStyle");
 const quizPartStyle = document.querySelector(".quizPartStyle");
 const resultStyle = document.querySelector(".resultStyle");
 // ============= def Variable =================
@@ -158,13 +159,16 @@ const showQuestion = ()=>{
     })
 }
 
-
+// if we want to reset quiz , we need reset all the follwoing element ...
 const resetQuiz = ()=>{
     resetTimer();
     correctAnsewer = 0 ;
-    historyAskIndex  =0 ; 
-    
+    historyAskIndex.length = 0 ; 
+    mainStyle.style.display = "block";
+    resultStyle.style.display = "none";
+
 }
+// ============================================
 showQuestion();
 // ============ Next Question ===============
 btnNextQuestion.addEventListener("click",showQuestion);
