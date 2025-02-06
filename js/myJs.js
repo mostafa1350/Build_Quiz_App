@@ -158,8 +158,16 @@ const showQuestion = ()=>{
     })
 }
 
+
+const resetQuiz = ()=>{
+    resetTimer();
+    correctAnsewer = 0 ;
+    historyAskIndex  =0 ; 
+    
+}
 showQuestion();
 // ============ Next Question ===============
 btnNextQuestion.addEventListener("click",showQuestion);
 // ==========================================
-// console.log("Test_____");
+// For Try Again ...
+document.querySelector(".btnTryAgain").addEventListener("click",resetQuiz);
