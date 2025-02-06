@@ -58,8 +58,8 @@ const myAsksArray=[
     // ======================
 
     {
-        category:"ٍEntomology",
-        questions:[
+        category:"Entomology",
+        asks:[
             {
                 question:"Insects that pass through the egg, larva, pupa, and adult stages in their life cycle have....",
                 options:["Incomplete metamorphosis","No metamorphosis","Complete metamorphosis","Gradual metamorphosis"],
@@ -117,7 +117,7 @@ const myAsksArray=[
 
     {
         category:"Geography",
-        questions:[
+        asks:[
             {
                 question:"What is the name of the tallest mountain in the world?",
                 options:["K2","Everest","Makalu","Manaslu"],
@@ -174,7 +174,7 @@ const myAsksArray=[
 
     {
         category:"Physics",
-        questions:[
+        asks:[
             {
                 
                 question:"How many planets are there in our Solar System?",

@@ -18,9 +18,7 @@ body{
     align-items:center;
     padding:20px;
 }
-.askOptions{
 
-}
 /* =========================== */
 :where(.mainStyle ,.quizPartStyle, .resultStyle){
 
@@ -36,18 +34,18 @@ body{
 /* =========================== */
 
 .mainStyle{
-    /* we want to hidden this part , until Script execute */
-    /* display:none; */
+    /* After all setting , we active to show only "mainStyle" */
+    display:block;
     /* ===================== */
     width:80%;
     text-align:center;
     padding:30px;
 }
-.headerCategory{
+.categoryQuestion{
     margin:25px;
     color:rgb(201, 115, 2);
 }
-.btnOptions{
+.btnCategoryOptions{
     padding:5px;
     border:2px dot #bbbb00;
     cursor:pointer;
@@ -64,7 +62,7 @@ body{
 .Options button:hover{
     background:rgb(224, 224, 201);
 }
-.askOptions{
+.askNumberOptions{
     margin:20px;
     display:flex;
     flex-direction:row;
@@ -72,7 +70,7 @@ body{
     justify-content:center;
     align-items:center;
 }
-.btnAskOptions{
+.btnNumberAsk{
     padding:5px;
     border:2px dot #bbbb00;
     cursor:pointer;
@@ -116,7 +114,7 @@ body{
 /* ================================================= */
 .quizPartStyle{
     width:80%;
-    display:block;
+    /* display:block; */
 
 }
 .quizHeader{

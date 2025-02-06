@@ -5,19 +5,22 @@ const quizPartStyle = document.querySelector(".quizPartStyle");
 const resultStyle = document.querySelector(".resultStyle");
 // ============= def Variable =================
 
-let myCategoryAsk = "programming";
+let myCategoryAsk = "Physics";
+let totalQuestion = 10;
+
+// =============================================
 let replyOptions = document.querySelector(".aswerQuizUlList");
 let btnNextQuestion = document.querySelector(".btnNextAsk");
 let curQuestion=null;
 //we want that each question comes only one time so we need to History of each Question
 const historyAskIndex = [];
 const recordNumber = document.querySelector(".recordNumber");
-const totalQuestion = 10;
+
 
 let numberCorrectReply = 0;
 
 // ================= TIMER ===================
-const timeQuiz  = 5;
+const timeQuiz  = 10;
 let curTime = timeQuiz;
 let timer = null;
 const showTimer = document.querySelector(".quizTime");
@@ -38,6 +41,9 @@ const startTimer = ()=>{
             //then we must go to the next Question & reveal the answer
             highLightReplyFunc();
             btnNextQuestion.style.visibility = "visible";
+            //change background timer and blinking
+            quizPartStyle.querySelector(".quizTimer").style.background = "#ff0000";
+            window.alert("Time is Over .... Plz go to the Next Question👉");
             //disable all answer
             replyOptions.querySelectorAll(".listAnsewer").forEach(option => option.style.pointerEvents = "none");
 
@@ -140,6 +146,9 @@ const showQuestion = ()=>{
 
     // "question" is a "field" from question=>asks=>myAsksArray=>myQuestions.js
     document.querySelector(".quizAsk").textContent = curQuestion.question;
+    //change background after time is over ...
+    quizPartStyle.querySelector(".quizTimer").style.background = "#666662";
+
     //"options" is a "field" from options=>asks=>myAsksArray=>myQuestions.js
 
     // Show Record Number Status ...
@@ -159,6 +168,33 @@ const showQuestion = ()=>{
     })
 }
 
+// ==========================================================
+//After Clicking category Option and Number of Quiz ...
+//Then each Option will be highted after clicking ...
+
+document.querySelectorAll(".btnCategoryOptions,.btnNumberAsk").forEach(myOption => {
+    myOption.addEventListener("click", ()=>{
+        myOption.parentNode.querySelector(".active").classList.remove("active");
+        myOption.classList.add("active");
+        console.log("option = >" + myOption);
+
+    });
+});
+
+// ============================================================
+const startQuiz = ()=>{
+    mainStyle.style.display = "none";
+    quizPartStyle.style.display = "block";
+    //========
+    myCategoryAsk = mainStyle.querySelector(".btnCategoryOptions.active").textContent;
+    totalQuestion = parseInt(mainStyle.querySelector(".btnNumberAsk.active").textContent);
+    console.log("total => " + totalQuestion);
+    // we show Question Part in this Event
+    showQuestion();
+}
+
+// ==========================================================
+
 // if we want to reset quiz , we need reset all the follwoing element ...
 const resetQuiz = ()=>{
     resetTimer();
@@ -169,9 +205,10 @@ const resetQuiz = ()=>{
 
 }
 // ============================================
-showQuestion();
+
 // ============ Next Question ===============
 btnNextQuestion.addEventListener("click",showQuestion);
 // ==========================================
 // For Try Again ...
 document.querySelector(".btnTryAgain").addEventListener("click",resetQuiz);
+document.querySelector(".btnSatartQuiz").addEventListener("click",startQuiz);
